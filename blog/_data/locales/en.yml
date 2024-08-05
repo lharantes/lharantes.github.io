@@ -1,0 +1,89 @@
+# Layout text for the site
+
+# ----- Common labels -----
+
+layout:
+  post: Post
+  category: Categoria
+  tag: Tag
+
+# Tabs in the sidebar
+tabs:
+  # format: <filename_without_extension>: <value>
+  home: Home
+  categories: Categorias
+  archives: Timeline
+  tags: Tags
+  about: Sobre
+  experiences: Experiências
+  certifications: Certificações
+  certificates: Certificados
+  recommendations: Recomendações
+
+# Text displayed in the search bar & search results
+search:
+  hint: Buscar
+  cancel: Cancelar
+  no_results: Oops! Nenhum resultado encontrado.
+
+panel:
+  lastmod: Atualizados recentemente
+  trending_tags: Tags
+  toc: Conteúdo
+
+# Copyright information
+copyright:
+  # Shown at the bottom of the post
+  license:
+    template: Este post está licenciado sob :LICENSE_NAME e pelo autor.
+    name: CC BY 4.0
+    link: https://creativecommons.org/licenses/by/4.0/
+
+  # Displayed in the footer
+  brief: Todos os direitos reservados.
+  verbose: >-
+    Exceto onde indicado de outra forma, as postagens do blog neste site são licenciadas
+    sob a Licença Creative Commons Atribuição 4.0 Internacional (CC BY 4.0) do autor.
+
+meta: ' ' # Remove footer without replacing template
+
+# 404 Not Found page
+not_found:
+  statement: Desculpe, perdemos esse URL ou ele está apontando para algo que não existe.
+  hint_template: :HEAD_BACK para tentar encontrá-lo novamente, ou procure-o na :ARCHIVES_PAGE.
+  head_back: Voltar para Home
+  archives_page: Página de Arquivos
+
+# Notification
+notification:
+  update_found: Uma nova versão do conteúdo está disponível.
+  update: Atualização
+
+# ----- Posts related labels -----
+
+post:
+  written_by: Por
+  posted: Postado em
+  updated: Atualizado
+  words: palavras
+  pageview_measure: visualizações
+  read_time:
+    unit: min
+    prompt: " de leitura"
+  relate_posts: Leia também
+  share: Compartilhar
+  button:
+    next: Próximo
+    previous: Anterior
+    copy_code:
+      succeed: Copiado!
+    share_link:
+      title: Copiar Link
+      succeed: Link copiado com sucesso!
+  # Pinned prompt of posts list on homepage
+  pin_prompt: Fixado
+
+# Categories page
+categories:
+  category_measure: categorias
+  post_measure: posts
