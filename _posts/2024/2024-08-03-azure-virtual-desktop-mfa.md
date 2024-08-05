@@ -17,7 +17,7 @@ Para essa configuração iremos usar o recurso de **Acesso Condicional** do Azur
 
 ![azure-avd-mfa](/assets/img/18/18-thumbnail.png)
 
-# Criando a política de Acesso Condicional
+## Criando a política de Acesso Condicional
 
 As políticas de Acesso Condicional em sua forma mais simples são instruções **if-then;** Se um usuário quiser acessar um recurso, ele deverá concluir uma ação. Por exemplo: no nosso caso desse artigo se um usuário quiser acessar a área de trabalho remota do AVD, ele deverá executar a autenticação multifator para obter acesso. As políticas de Acesso Condicional são aplicadas após a conclusão da autenticação de primeiro fator, ou seja, primeiro é feita a autenticação em forma de "usuário e senha" (pode haver outras formas de autenticação) e depois disso é aplicada a política de acesso condicional relacionada ao serviço configurado.
 

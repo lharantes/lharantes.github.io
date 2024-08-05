@@ -16,10 +16,11 @@ Atualmente moro em Portugal, e pretendo também através de posts nesse blog tra
 
 Abaixo compartilho algumas certificações que possuo atualmente:
 
-![Azure Architect](/assets/img/about/azure-architect.png)![AWS Architect](/assets/img/about/aws-architect.png)![GCP Architect](/assets/img/about/gcp-architect.png)![Azure Devops](/assets/img/about/azure-devops.png)
+![Azure Architect](/assets/img/about/azure-architect.png)![AWS Architect](/assets/img/about/aws-architect.png)![GCP Architect](/assets/img/about/gcp-architect.png)
 
-![Terraform](/assets/img/about/terraform.png)![azure-administrator](/assets/img/about/azure-administrator.png)![Azure AVD](/assets/img/about/azure-avd.png)
-![Azure Network](/assets/img/about/azure-network.png)![Azure Security](/assets/img/about/azure-security.png)![AWS Practitioner](/assets/img/about/aws-practitioner.png)![MCT](/assets/img/about/mct.png)  
+![Azure Devops](/assets/img/about/azure-devops.png)![Terraform](/assets/img/about/terraform.png)![azure-administrator](/assets/img/about/azure-administrator.png)
+![Azure AVD](/assets/img/about/azure-avd.png)![Azure Network](/assets/img/about/azure-network.png)![Azure Security](/assets/img/about/azure-security.png)
+![AWS Practitioner](/assets/img/about/aws-practitioner.png)![MCT](/assets/img/about/mct.png)  
 
 
 
