@@ -16,7 +16,7 @@ timezone: America/Sao_Paulo
 
 title: Luiz H. Arantes # the main title
 
-tagline: Cloud Solutions Architect | Devops | 🇧🇷 🇵🇹 # it will display as the sub-title
+tagline: Cloud Solutions Architect | Devops  🇧🇷 🇵🇹 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
