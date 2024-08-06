@@ -9,6 +9,8 @@ image:
   path: assets/img/18/18-header.webp
 ---
 
+Olá pessoal! Blz?
+
 Nesse artigo eu quero trazer uma configuração para forçar o uso do **MFA (Multi-factor authentication)** em sessões do **Azure Virtual Desktop (AVD)** para garantir uma segurança maior quando os usuários acessarem esse serviço.
 
 O Azure Virtual Desktop é um serviço do Microsoft Azure de área de trabalho remota, onde podemos disponibilizar um desktop virtual inteiro para o usuário ou apenas disponibilizar algumas aplicações para realizar o seu trabalho. E com o uso do AVD, o usuário pode acessar o ambiente de trabalho ou uma aplicação de qualquer lugar, ou seja, fora do ambiente da empresa, e consequentemente em um ambiente que não podemos controlar, usar alguns recursos para garantir uma segurança maior é sempre bem vindo!
