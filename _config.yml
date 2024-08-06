@@ -16,7 +16,7 @@ timezone: America/Sao_Paulo
 
 title: Luiz Henrique Arantes # the main title
 
-tagline: Cloud Solutions Architect | Devops  🇧🇷 🇵🇹 # it will display as the sub-title
+tagline: Cloud Solutions Architect | Devops  🇧🇷 🇵🇹
 
 description: >- # used by seo meta and the atom feed
   Personal blog about Cloud Computing, Azure, AWS, GCP and Terraform
@@ -59,7 +59,7 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: 'G-HEZYPPSBTK'
   goatcounter:
     id: # fill in your GoatCounter ID
   umami:
@@ -107,10 +107,10 @@ toc: true
 
 comments:
   # Global switch for the post comment system. Keeping it empty means disabled.
-  provider: # [disqus | utterances | giscus]
+  provider: [disqus] # utterances | giscus
   # The provider options are as follows:
   disqus:
-    shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+    shortname: 'blog-arantes-net-br' # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
     repo: # <gh-username>/<repo>
