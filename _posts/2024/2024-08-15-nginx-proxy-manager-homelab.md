@@ -1,6 +1,6 @@
 ---
 #layout: post
-title: 'Homelab: Usando certificado SSL (HTTPS) em serviços locais com Nginx Proxy Manager' 
+title: 'Usando certificado SSL (HTTPS) em serviços locais (homelab) com Nginx Proxy Manager' 
 date: 2024-08-15 11:33:00
 categories: [Homelab]
 tags: [Homelab, nginx, devops]
