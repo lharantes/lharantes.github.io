@@ -124,7 +124,7 @@ Podemos ver que o site está sendo acessado com o certificado SSL e isso mesmo e
 
 ## Concluindo!
 
-Bom pessoal, eu quis compartilhar com vocês como estou usando/acesando os serviços que rodo em meu homelab, e calro que acessando através de nomes é muito mais fácil do que por IP e adicionar uma camada a mais de segurança, seja, ao menos com um certificado SSL é muito melhor.
+Bom pessoal, eu quis compartilhar com vocês como estou usando/acesando os serviços que rodo em meu homelab, e claro que acessando através de nomes é muito mais fácil do que por IP e adicionar uma camada a mais de segurança, seja, ao menos com um certificado SSL é muito melhor.
 
 Bom pessoal, espero que tenha gostado e que esse artigo seja útil a vocês!
 
