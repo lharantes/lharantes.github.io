@@ -20,7 +20,7 @@ Eu ainda não sei o porque, mas tive problema no passado quando eu me conectava 
 <img src="/assets/img/20/01.png" alt="Se tem placa tem história" width="400" height="400">
 
 > Se tem placa tem história!!! 😊 😜
-{: .prompt-danger }
+{: .prompt-info }
 
 Bom, o que precisamos então para fazer essa conexão e autenticação? No Microsoft Azure precisaremos de um **service principal** e que esse service principal tenha **permissão na Assinatura e/ou no Resource Group** que iremos realizar o deploy.
 
