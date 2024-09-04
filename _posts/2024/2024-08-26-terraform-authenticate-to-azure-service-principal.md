@@ -36,7 +36,7 @@ az ad sp create-for-rbac --name myServicePrincipalName \
                          --scopes /subscriptions/00000000-0000-0000-0000-000000000000
 ```
 
-O exemplo acima estou criando o Service Principal e já dando acesso de **contributor** na aAssinatura toda, mas se você quer dar acesso somente a um Resource Group específico é só adicional a parte final do comando o trecho ***/resourceGroups/myRG***.
+O exemplo acima estou criando o Service Principal e já dando acesso de **contributor** na assinatura toda, mas se você quer dar acesso somente a um Resource Group específico é só adicional a parte final do comando o trecho ***/resourceGroups/myRG***.
 
 ## Autenticando usando variáveis de ambiente
 
