@@ -25,8 +25,14 @@ Para essa atividade temos alguns pré-requisitos e alguns cuidados que devemos t
 * Permissão de **Billing account owner** ou **Owner** da assinatura que você deseja transferir no diretório de origem
 * Uma conta de usuário no diretório de origem e de destino para o usuário que faz a alteração de diretório
 
-> Tenha a certeza que você tenha acesso nos 2 tenants, seja no de origem e no de destino para que você possa acessar e fazer os ajustes após a movimentação.
+> Tenha a certeza que você tenha acesso nos 2 diretórios, no de origem e no de destino
 {: .prompt-warning }
+
+Para verificar se tem acesso ao diretório (tenant) de origem e destino você pode verificar seguindo os passos da imagem abaixo:
+
+![azure-tenant-subscription](/assets/img/21/05.png)
+
+Caso não tenha acesso você terá que pedir que alguém desse diretório que você não tem acesso, que te adicione ou convide para esse diretório. 
 
 ## Cuidados antes de mover a assinatura
 
@@ -81,6 +87,9 @@ az ad sp list --all --filter "servicePrincipalType eq 'ManagedIdentity'"
 Após os passos anteriores já estarem feitos e termos todo o "backup" das permissões podemos iniciar a transferência da assinatura para o outro diretório (tenant), para isso no menu **"Overview"** devemos escolher a opção **"Change directory"** e em **"To"** escolher qual será o diretório de destino e clicar no botão **"Change"**:
 
 ![azure-tenant-subscription](/assets/img/21/03.png)
+
+> No combobox **"Select a directory"** (item 2), se você não tiver acesso ao diretório de destino você não o verá nessa lista para onde podemos mover a assinatura.
+{: .prompt-info }
 
 Aguarde a mensagem de confirmação de que a assinatura está sendo migrada. Pode levar até 10 minutos para que você possa reutilizar todos os recursos. No entanto, os recursos **não estão offline**, simplesmente não são exibidos. Normalmente não há tempo de inatividade com esse tipo de migração.
 
