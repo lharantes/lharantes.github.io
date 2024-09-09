@@ -11,7 +11,7 @@ image:
 
 Olá pessoal! Blz?
 
-Nesse artigo eu quero trazer uma atividade rotineira de um **Azure Cloud Engineer** que é mover uma assinatura de um diretório (tenant) para outro, os motivos podem ser por questões de organização, quando uma empresa é comprada e/ou, feita uma fusão entre empresas ou outro que seja o motivo.
+Nesse artigo eu quero trazer uma atividade rotineira de um **Azure Cloud Engineer** que é mover uma assinatura de um diretório (tenant) para outro, os motivos podem ser por questões de organização, quando uma empresa é comprada, feita uma fusão entre empresas ou outro que seja o motivo.
 
 As empresas podem ter várias assinaturas do Azure e cada assinatura é associada a um diretório (tenant) específico do Microsoft Entra ID. Quando você transfere uma assinatura para um diretório diferente do Microsoft Entra, alguns recursos não são transferidos para o diretório de destino. Por exemplo, todas as permissões do Azure são excluídas permanentemente do diretório de origem e não são transferidas para o diretório de destino.
 
