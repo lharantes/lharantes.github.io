@@ -11,7 +11,7 @@ image:
 
 Olá pessoal! Blz?
 
-Nesse artigo eu quero trazer uma atividade rotineira de um **Azure Cloud Engineer** que é mover uma assinatura de um diretório (tenant) para outro, os motivos podem ser por questões de organização, quando uma empresa é comprada e/ou feita uma fusão entre empresas ou outro que seja o motivo.
+Nesse artigo eu quero trazer uma atividade rotineira de um **Azure Cloud Engineer** que é mover uma assinatura de um diretório (tenant) para outro, os motivos podem ser por questões de organização, quando uma empresa é comprada e/ou, feita uma fusão entre empresas ou outro que seja o motivo.
 
 As empresas podem ter várias assinaturas do Azure e cada assinatura é associada a um diretório (tenant) específico do Microsoft Entra ID. Quando você transfere uma assinatura para um diretório diferente do Microsoft Entra, alguns recursos não são transferidos para o diretório de destino. Por exemplo, todas as permissões do Azure são excluídas permanentemente do diretório de origem e não são transferidas para o diretório de destino.
 
@@ -30,7 +30,7 @@ Para essa atividade temos alguns pré-requisitos e alguns cuidados que devemos t
 
 ## Cuidados antes de mover a assinatura
 
-Antes de mover uma assinatura devemos ter o cuidado de salvar as permissões atribuídas da assinatura, as custom roles e as "managed identities",pois como dito acima, essas permissões são todas perdidas durante a movimentação. Irei mostrar como fazer isso pelo portal e algumas por Azure CLI.
+Antes de mover uma assinatura devemos ter o cuidado de salvar as permissões atribuídas da assinatura, as custom roles e as "managed identities", pois como dito acima, essas permissões são todas perdidas durante a movimentação. Irei mostrar como fazer isso pelo portal e algumas por Azure CLI.
 
 ### Exportar as permissões RBAC
 
@@ -70,7 +70,7 @@ Depois faça cópias dos arquivos das custom roles, onde cada **custom role** se
 
 ### Listar as permissões "managed identities"
 
-Identidades gerenciadas não são atualizadas quando uma assinatura é transferida para outro diretório, ou seja todas as identidades serão perdidas. Após a transferência, você pode reabilitar todas as identidades gerenciadas atribuídas pelo sistema. Para identidades gerenciadas atribuídas pelo usuário, você precisará recriá-las e anexá-las no diretório de destino. Use o comando abaixo para listar as identidades gerenciadas:
+Identidades gerenciadas não são atualizadas quando uma assinatura é transferida para outro diretório, ou seja, todas as identidades serão perdidas. Após a transferência, você pode reabilitar todas as identidades gerenciadas atribuídas pelo sistema. Para identidades gerenciadas atribuídas pelo usuário, você precisará recriá-las e anexá-las no diretório de destino. Use o comando abaixo para listar as identidades gerenciadas:
 
 ```powershell
 az ad sp list --all --filter "servicePrincipalType eq 'ManagedIdentity'"
@@ -78,7 +78,7 @@ az ad sp list --all --filter "servicePrincipalType eq 'ManagedIdentity'"
 
 ## Mover a assinatura para outro diretório (Tenant)
 
-Após os passos anteriores já estarem feitos e termos todo o "backup" das permissões podemos inicar a transferência da assinatura para o outro diretório (tenant), para isso no menu **"Overview"** devemos escolher a opção **"Change directory"** e em **"To"** escolher qual será o diretório de destino e clicar no botão **"Change"**:
+Após os passos anteriores já estarem feitos e termos todo o "backup" das permissões podemos iniciar a transferência da assinatura para o outro diretório (tenant), para isso no menu **"Overview"** devemos escolher a opção **"Change directory"** e em **"To"** escolher qual será o diretório de destino e clicar no botão **"Change"**:
 
 ![azure-tenant-subscription](/assets/img/21/03.png)
 
@@ -91,7 +91,7 @@ Aguarde a mensagem de confirmação de que a assinatura está sendo migrada. Pod
 
 Após o término da movimentação da assinatura, teremos que restabelecer **TODAS** as permissões que exportamos, pois como falamos acima, todas as permissões são perdidas, para isso não há uma forma automática para importar as permissões do arquivo exportado, mas nada impede que você crie um script powershell para importar as permissões.
 
-Além das permissões temos também que recriar as **Custom Roles** e as **identidades gerenciadas** perdidas, ou seja, o maior trabalho é agora em restabelecer as permissões como estava antes da movimentação.
+Além das permissões, temos também que recriar as **Custom Roles** e as **identidades gerenciadas** perdidas, ou seja, o maior trabalho é agora em restabelecer as permissões como estava antes da movimentação.
 
 > Lembrando que para adicionar as permissões primeiro você precisa estar com a permissão de **Owner** para realizar essa atividade.
 {: .prompt-info }
