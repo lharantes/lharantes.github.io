@@ -1,6 +1,6 @@
 ---
 #layout: post
-title: 'Mover assinaturas Azure entre Tenants do Microsoft Entra ID' 
+title: 'Mover assinaturas do Azure entre tenants do Microsoft Entra ID' 
 date: 2024-09-08 01:03:00
 categories: [Azure]
 tags: [azure, migrate]
