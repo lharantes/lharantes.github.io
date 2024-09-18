@@ -48,7 +48,7 @@ Para criar um service principal pelo portal precisamos para o nosso exemplo apen
 
 <br>
 
-O que recomendo em ambiente corporativo é selecionar um **Owner** para o service principal, pois indica quem é o responsável pelo menos e quem devemos procurar em caso de dúvida ou consulta. Para isso com o service principal aberto devemos escolher no menu lateral a opção **"Owner"** -> **"+ Add owners"**:
+O que recomendo em ambiente corporativo é selecionar um **Owner** para o service principal, pois indica quem é o responsável pelo menos e quem devemos procurar em caso de dúvida ou consulta. Para isso com o service principal aberto devemos escolher no menu lateral a opção **"Owners"** -> **"+ Add owners"**:
 
 ![service-principal](/assets/img/23/09.png)
 
