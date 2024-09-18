@@ -47,6 +47,13 @@ Para criar um service principal pelo portal precisamos para o nosso exemplo apen
 ![service-principal](/assets/img/23/04.png)
 
 <br>
+
+O que recomendo em ambiente corporativo é selecionar um **Owner** para o service principal, pois indica quem é o responsável pelo menos e quem devemos procurar em caso de dúvida ou consulta. Para isso com o service principal aberto devemos escolher no menu lateral a opção **"Owner"** -> **"+ Add owners"**:
+
+![service-principal](/assets/img/23/09.png)
+
+<br>
+
 Com o service principal criado precisamos dar as permissões necessárias para que tenha acesso as informações das aplicações, para isso com o service principal aberto devemos ir em **"API permissions"** -> **" + Add a permission"** -> **"Microsoft Graph"**:
 
 ![service-principal](/assets/img/23/05.png)
