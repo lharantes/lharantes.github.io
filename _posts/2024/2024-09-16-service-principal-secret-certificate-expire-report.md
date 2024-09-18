@@ -19,7 +19,7 @@ Para criar um service principal fazemos isso pelo portal web ou por powershell/a
 
 ## Solução proposta
 
-Não tem nada nativo pelo portal da Microsoft que traga esse relatório ou alerta, até mesmo o script powershell que a Microsoft disponibiliza no learn ela frisa bem que aquilo não é oficial, <a href="http://arantes.net.br/posts/service-principal-secret-certificate-expire-report/#artigos-relacionados"> deixarei o link abaixo </a>, o que eu fiz então foi pegar o script disponibilizado e adaptar para o que eu preciso. O e-mail que recebo semanalmente é o da imagem abaixo e que iremos fazer nesse artigo:
+Não tem nada nativo pelo portal da Microsoft que traga esse relatório ou alerta, até mesmo o script powershell que a Microsoft disponibiliza no learn ela frisa bem que aquilo não é oficial, <a href="https://arantes.net.br/posts/service-principal-secret-certificate-expire-report/#artigos-relacionados"> deixarei o link abaixo </a>, o que eu fiz então foi pegar o script disponibilizado e adaptar para o que eu preciso. O e-mail que recebo semanalmente é o da imagem abaixo e que iremos fazer nesse artigo:
 
 ![service-principal](/assets/img/23/01.png)
 
@@ -78,7 +78,7 @@ Nesse exemplo usaremos um **Secret** para se conectar ao Entra ID, para isso dev
 
 ## Script para gerar o relatório
 
-Para poder explicar melhor o script irei dividi-lo em 3 partes, a primeira parte para conexão com o Microsoft Entra ID, a segunda parte que é a extração das informações e a terceira parte que é o envio do e-mail. Deixo aqui o script completo em um único arquivo mas no formato txt: <a href="http://arantes.net.br/assets/img/23/sp-expire-connect-secret.txt" target="_blank">sp-expire-connect-secret.txt</a> onde você precisa depois de feito o download renomear para a extensão **.ps1**
+Para poder explicar melhor o script irei dividi-lo em 3 partes, a primeira parte para conexão com o Microsoft Entra ID, a segunda parte que é a extração das informações e a terceira parte que é o envio do e-mail. Deixo aqui o script completo em um único arquivo mas no formato txt: <a href="https://arantes.net.br/assets/img/23/sp-expire-connect-secret.txt" target="_blank">sp-expire-connect-secret.txt</a> onde você precisa depois de feito o download renomear para a extensão **.ps1**
 
 ### 1. Conexão com o Microsoft Entra ID
 
