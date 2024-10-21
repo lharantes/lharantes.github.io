@@ -103,7 +103,8 @@ A seguir irei deixar as playbooks que são importadas pela playbook main.yml.
 
 Os servidores para fazerem parte de um cluster kubernetes possuem alguns requisitos e no playbook abaixo iremos instalá-los, em cada task tem o nome que diz o que a determinada task está fazendo para ajudar a compreender melhor a playbook:
 
-```yaml
+```yaml 
+{% raw %}
 - name: Preparar servidores para o ambiente Kubernetes 
   hosts: all
   become: yes
@@ -256,6 +257,7 @@ Os servidores para fazerem parte de um cluster kubernetes possuem alguns requisi
         name: kubectl=1.29.*
         state: present
         force: yes
+{% endraw %}
 ```
 
 ## Arquivo master.yml
@@ -263,6 +265,7 @@ Os servidores para fazerem parte de um cluster kubernetes possuem alguns requisi
 A playbook **master.yml** configura o servidor escolhido para ser o Master ou Control Plane do cluster kubernetes, a variavel ***"{{ user_azure }}"*** foi definida no arquivo de inventário e é o usuário que criamos para as máquinas virtuais:
 
 ```yaml
+{% raw %}
 - name: Configurar o servidor control plane
   hosts: master
   become: yes
@@ -317,7 +320,7 @@ A playbook **master.yml** configura o servidor escolhido para ser o Master ou Co
       become: yes
       become_user: "{{ user_azure }}"
       shell: kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/kube-flannel.yml 
-
+{% endraw %}
 ```
 
 ## Arquivo worker.yml
@@ -325,6 +328,7 @@ A playbook **master.yml** configura o servidor escolhido para ser o Master ou Co
 No arquivo **worker.yml** fazemos o **join no cluster kubernetes** dos 2 servidores definidos como workers:
 
 ```yaml
+{% raw %}
 name: Criar o comando de Join no Master Node
   become: yes
   hosts: master
@@ -343,8 +347,7 @@ name: Criar o comando de Join no Master Node
   tasks:
     - name: Incluindo o servidor no cluster
       shell: "{{ hostvars[groups['master'][0]]['join_command'] }}"
-
-
+{% endraw %}
 ```
 
 ## Resultado da execução dos scripts
