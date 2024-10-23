@@ -13,14 +13,14 @@ Olá pessoal! Blz?
 
 Nesse artigo eu quero trazer a vocês como eu faço para criar e configurar uma máquina virtual no meu servidor Proxmox em meu HomeLab, vou deixar também uma task que uso para enviar uma mensagem no Telegram depois que a máquina virtual está pronta para uso. No artigo passado eu mostrei a vocês <a href="https://arantes.net.br/posts/create-template-proxmox/" target="_blank">como criar uma VM "template" Linux para usar no Proxmox</a>, e foi mostrado no artigo que para criar a máquina virtual e só clicar com o botão direito no template e escolher a opção ***"Clonar"***.
 
-Ok certo!!!Mas então por que eu tenho usando o Ansible para isso???? Bem a resposta é: para além de criar, eu já especificar algumas configurações personalizadas e também usar o Ansible para deixar essa máquina virtual configurada e pronto para o uso instalando alguns pacotes básicos.
+Ok certo!!!Mas então por que eu tenho usando o Ansible para isso???? Bem a resposta é: para além de criar, usar o Ansible para deixar essa máquina virtual configurada e pronta para o uso, instalando alguns pacotes básicos.
 
 > Eu não deixo isso já pronto na imagem que uso de template pois eu posso querer usar o template para um propósito diferente.
 {: .prompt-info }
 
 ## Requisitos para uso do Ansible e Proxmox
 
-Para usarmos o Ansible e Proxmox em conjunto precisamos de alguns itens, algum deles mostrarei como criar e outros deixarei o link:
+Para usarmos o Ansible e Proxmox em conjunto precisamos de alguns itens, alguns deles mostrarei como criar e outros deixarei o link:
 
 - **API Token**: para nos autenticarmos no Proxmox
 
@@ -46,7 +46,7 @@ Após clicar em **"Add"** o token será exibido:
 
 ![create-config-vm-proxmox-ansible](/assets/img/26/05.png){: .shadow .rounded-20}
 
-> Copie o token e guarde em algum lugar pois não sera exibido novamente.
+> Copie o token e guarde em algum lugar pois não será exibido novamente.
 {: .prompt-info }
 
 Em seguida, atribua permissões ao usuário ansible e ao token associado. Requer pelo menos essas permissões.
@@ -58,7 +58,7 @@ Em seguida, atribua permissões ao usuário ansible e ao token associado. Requer
 > Para nao ficar extenso o artigo eu vou colocar os arquivos principais, mas para ter todos os arquivos vocês podem acessar o repositório no GitHub: <a href="https://github.com/lharantes/arquivos-blog/tree/main/create-config-vm-proxmox-ansible" target="_blank">create-config-vm-proxmox-ansible</a> 
 {: .prompt-info }
 
-No meu ambiente local eu tenho uma pasta com o nome **homelab-ansible** onde eu mantenho as roles que uso em meu ambiente HomeLab, ainda está bem no começo mas quero continuar estudando e aplicando no meu ambiente. A estrutura de pastas está da seguinte maneira: ***uma pasta para as roles***, ***o arquivo de hosts***, ***o arquivo de configuração do Ansible (ansible.cfg)*** e o arquivo ***main.yml*** que eu uso para chamar as roles que eu quero executar, a estrutura dee pastas e arquivos ficam da seguinte maneira:
+Tenho uma pasta com o nome **homelab-ansible** onde eu mantenho as roles que uso em meu ambiente HomeLab, ainda está bem no começo mas quero continuar estudando e aplicando no meu ambiente. A estrutura de pastas está da seguinte maneira: ***uma pasta para as roles***, ***o arquivo de hosts***, ***o arquivo de configuração do Ansible (ansible.cfg)*** e o arquivo ***main.yml*** que eu uso para chamar as roles que eu quero executar, a estrutura de pastas e arquivos ficam da seguinte maneira:
 
 ```
 📦homelab-ansible
@@ -139,7 +139,7 @@ Seguindo a minha estrutura de pastas o conteúdo da role ficará da seguinte for
 
 Como vocês sabem, cada máquina virtual no Proxmox tem um ID, o ID das minhas máquinas virtuais estão começando em 100 e para a **MINHA** organização eu sempre associo o IP da máquina virtual com o ID, por exemplo: a máquina virtual com ID 105 terá o IP 192.168.1.**105**, mas caso não usem dessa forma podem excluir a task **Getting the VM ID** e **Setting the IP**.
 
-Na task **Print VM IP and Name to HOST file** eu adiciono a máquina virtual criada ao meu arquivo de hosts, caso você prefira fazer isso de forma manual pode também remover essa task.
+Na task **Print VM IP and Name to HOST file** eu adiciono a máquina virtual criada ao meu arquivo de hosts do Ansible, caso você prefira fazer isso de forma manual pode também remover essa task.
 
 ```yaml
 --- {% raw %}
@@ -206,7 +206,7 @@ storage:
 api_token_secret:
 ```
 
-Após a criação da máquina virtual podemos usar uma task para receber uma notificação no Telegram de que a máquina virtual foi criado eu uso o seguinte código:
+Após a criação da máquina virtual podemos usar uma task para receber uma notificação no Telegram informando que a máquina virtual foi criado, para isso uso o seguinte código:
 
 ```yaml
 ---
@@ -227,12 +227,12 @@ Após a criação da máquina virtual podemos usar uma task para receber uma not
 ...
 ```
 
-> Para integrar com o Telegram é necessário a criação de um bot, vou deixar o link abaixo de como fazer isso
+> Para integrar com o Telegram é necessário a criação de um bot, vou deixar o link abaixo de como fazer isso, pois precisa passar o **token** e o **chat_id**
 {: .prompt-tip }
 
 ## Configurar uma máquina virtual Linux com Ansible
 
-Na role que uso para configurar a máquina virtual criada ou ja existente esta dividida da forma abaixo, lembrando que se tiver alguma task que não queira executar é só comentar no arquivo **tasks/main.yml**:
+Na role que uso para configurar a máquina virtual criada ou alguma já existente esta dividida da forma abaixo, lembrando que se tiver alguma task que não queira executar é só comentar no arquivo **tasks/main.yml**:
 
 ```
 📦config-vm-linux
@@ -366,7 +366,7 @@ Task para atualizar todos os pacotes e sistema operacional:
 
 ### vars/main.yml
 
-Arquivo de variáveis para esta role:
+Arquivo de variáveis para esta role com os pacotes que será instalado:
 
 ```yaml
 ---
@@ -375,17 +375,18 @@ packages:
   - vim
   - curl
   - wget
+  - htop
   - apt-transport-https
   - ca-certificates
   - git
   - unzip
 ``` 
 
-Com os scripts acima, a máquina estará com uma configuração "básica" que eu acho pertinente para o meu homelab, sintam-se livre para editar ou remover algum item.
+Com os scripts acima, a máquina estará com uma configuração "básica/inicial" que eu acho pertinente para o meu homelab, sintam-se livre para editar ou remover algum item.
 
 ## Executar a playbook do Ansible
 
-Se você seguir a estrutura de pastas e arquivos que eu fiz, você precisará estar na raiz, onde se encontra o arquivo de hosts e o arquivo main.yml e executar o comando passando na variável o nome da máquina virtual que quer criar, no exemplo abaixo a máquina virtual terá o nome de **lnx-teste-01**:
+Se você seguir a estrutura de pastas e arquivos que eu fiz, você precisará estar na raiz, onde se encontra o arquivo de hosts  do Ansilbe e o arquivo main.yml, executar o comando passando na variável **vm_name** o nome da máquina virtual que quer criar, no exemplo abaixo a máquina virtual terá o nome de **lnx-teste-01**:
 
 ```bash
 ansible-playbook main.yml  --extra-vars vm_name="lnx-teste-01"
@@ -401,7 +402,7 @@ E também é enviado uma mensagem no Telegram, pois eu geralmente executo a play
 
 <br>
 
-A segunda parte que é a role para configurar o servidor linux traz o seguinte resultado se executada com sucesso:
+A segunda parte é a role para configurar o servidor linux e traz o seguinte resultado se executada com sucesso:
 
 ![create-config-vm-proxmox-ansible](/assets/img/26/08.png){: .shadow .rounded-10}
 
@@ -410,7 +411,7 @@ A segunda parte que é a role para configurar o servidor linux traz o seguinte r
 
 ## Concluindo!
 
-Isso tudo poderia ser feito manualmente ou ate pelo portal web do Proxmox, mas usar o Ansible me força a estudar isso e aprender cada vez mais com os erros pois essa atividade não faz parte do meu dia a dia atualmente mas é algo que quero estar com o conhecimento em dia! 
+Isso tudo poderia ser feito manualmente ou até pelo portal web do Proxmox, mas usar o Ansible me força a estudar e aprender cada vez mais essa tecnologia, e como o Ansible não faz parte do meu dia a dia atualmente sempre encontro desafios, mas é algo que quero estar com o conhecimento afiado! 
 
 Bom pessoal, espero que tenha gostado e que esse artigo seja útil a vocês!
 
