@@ -11,7 +11,7 @@ image:
 
 Olá pessoal! Blz?
 
-Nesse artigo eu quero trazer a vocês como eu faço para criar e configurar uma máquina virtual no meu servidor Proxmox em meu HomeLab, vou deixar também uma task que uso para enviar uma mensagem no Telegram depois que a máquina virtual está pronta para uso. No artigo passado eu mostrei a vocês <a href="https://arantes.net.br/posts/create-template-proxmox/" target="_blank">como criar uma VM "template" Linux para usar no Proxmox</a>, e foi mostrado no artigo que para criar a máquina virtual e só clicar com o botão direito no template e escolher a opção ***"Clonar"***.
+Nesse artigo eu quero trazer a vocês como eu faço para criar e configurar uma máquina virtual no meu servidor Proxmox em meu HomeLab usando o Ansible, vou deixar também uma task que uso para enviar uma mensagem no Telegram depois que a máquina virtual está pronta para uso. No artigo passado eu mostrei a vocês <a href="https://arantes.net.br/posts/create-template-proxmox/" target="_blank">como criar uma VM "template" Linux para usar no Proxmox</a>, e foi mostrado no artigo que para criar a máquina virtual e só clicar com o botão direito no template e escolher a opção ***"Clonar"***.
 
 Ok certo!!!Mas então por que eu tenho usando o Ansible para isso???? Bem a resposta é: para além de criar, usar o Ansible para deixar essa máquina virtual configurada e pronta para o uso, instalando alguns pacotes básicos.
 

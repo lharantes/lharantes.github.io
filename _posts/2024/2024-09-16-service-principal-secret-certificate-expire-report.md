@@ -180,6 +180,9 @@ foreach ($App in $Applications) {
 > Lembrando que a variável **$DaysUntilExpiration** é onde determinamos a quantidade de dias antes de expirar
 {: .prompt-tip }
 
+> Para usar o script precisaremos instalar alguns módulos no powershell: **Microsoft.Graph.Applications**, **Microsoft.Graph.Authentication**, **Microsoft.Graph.Mail** e **Microsoft.Graph.Users.Actions**
+{: .prompt-warning }
+
 ### 3. Enviando o e-mail com o relatório
 
 Para enviar o relatório que nada mais é uma tabela com o resultado da busca acima no formato HTML, criei um css simples para dar uma aparência melhor e alguns parâmetros. A primeira parte precisamos definir algumas variáveis que são valores de quem irá enviar e receber o relatório, assunto do e-mail, tipo de envio e se irá salvar o e-mail nos "Itens enviados":
