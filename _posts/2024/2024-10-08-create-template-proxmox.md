@@ -67,6 +67,12 @@ qm disk import 5000 noble-server-cloudimg-amd64.img local
 > Altere **local** para o armazenamento de sua escolha, no meu caso eu tenho isso em um disco separado para as máquinas virtuais com o nome **"vms-storage"**
 {: .prompt-tip }
 
+Para poder importar a imagem para o destino escolhido, precisamos habilitar o destino para receber o conteúdo de **ISO image**, para isso devemos ir em **Datacenter -> Storage -> "STORAGE ESCOLHIDA" -> Edit**
+
+![create-template-proxmox](/assets/img/25/04.png){: .shadow .rounded-10}
+
+![create-template-proxmox](/assets/img/25/05.png){: .shadow .rounded-10}
+
 Anexe o novo disco à máquina virtual como uma unidade SCSI no controlador SCSI:
 
 ```shell
