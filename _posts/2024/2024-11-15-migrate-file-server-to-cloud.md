@@ -17,7 +17,7 @@ Eu prefiro a abordagem de migrar para um Azure File Share pois conseguimos mante
 
 Recentemente ajudei um amigo a migrar um File Server 100% para o Azure e confesso que fiquei surpreso, pois a muito tempo não via sobre migrações como essa, o que tenho visto muito são migrações para o SharePoint para ter uma mobilidade maior e com isso o acesso aos arquivos de uma forma mais fácil remotamente e de qualquer lugar. Mas nada que uma boa e velha VPN não resolva o acesso aos outros tipos de File Server 😊 😜.
 
-Vou trazer em 2 artigos como **migrar um File Server 100% comleto para o Microsoft Azure** em e com isso não precisar mais manter um servidor on-premises com essa função. A primeira parte irei criar a infraestrutura de Storage Account no Azure e na segunda parte incluir o File share no domínio do Active Directory e como fazer a movimentacão dos arquivos para a cloud.
+Vou trazer em 2 artigos como **migrar um File Server local para 100% no Microsoft Azure** e com isso não precisar mais manter um servidor on-premises com essa função. A primeira parte irei criar a infraestrutura de Storage Account no Azure e na segunda parte incluir o File share no domínio do Active Directory e como fazer a movimentacão dos arquivos para a cloud.
 
 > Gostaria de deixar claro que será a **minha** opinião e experiência, caso você tenha outra visão ou experiência, seja bem vindo a contribuir nos comentários ou em contato comigo. 
 {: .prompt-info }
