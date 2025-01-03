@@ -150,7 +150,7 @@ Bom pessoal, espero que tenha gostado e que esse artigo seja útil a vocês!
 
 <a href="https://learn.microsoft.com/en-gb/azure/storage/files/storage-files-identity-ad-ds-enable?WT.mc_id=Portal-Microsoft_Azure_FileStorage" target="_blank">Enable Active Directory Domain Services authentication for Azure file shares</a> 
 
-<a href="https://github.com/Azure-Samples/azure-files-samples" target="_blank">his repository contains supporting code (PowerShell modules/scripts, ARM templates, etc.) for deploying, configuring, and using Azure Filese</a> 
+<a href="https://github.com/Azure-Samples/azure-files-samples" target="_blank">This repository contains supporting code (PowerShell modules/scripts, ARM templates, etc.) for deploying, configuring, and using Azure Filese</a> 
 
 <a href="https://learn.microsoft.com/en-us/azure/storage/files/storage-files-planning" target="_blank">Plan to deploy Azure Files</a> 
 
