@@ -32,7 +32,12 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 
 # Import AzFilesHybrid module
 Import-Module -Name AzFilesHybrid
+```
 
+> Nunca vi falando para fechar e abrir a console do PowerShell após importar o módulo, mas já tive problemas por não fazer isso, então para garantir, recomendo que feche e abra uma nova console do PowerShell para continuar com os comandos abaixo.
+{: .prompt-tip }
+
+```powershell
 # Login to Azure using a credential that has either storage account owner or contributor Azure role 
 # assignment.
 Connect-AzAccount
