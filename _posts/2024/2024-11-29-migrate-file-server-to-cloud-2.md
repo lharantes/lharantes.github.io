@@ -153,7 +153,7 @@ Para fazer isso você deve abrir o Azure file share e seguir o passo a passo aba
 
 ![migrate-file-server-to-azure](/assets/img/28/video3.gif){: .shadow .rounded-10}
 
-No exemplo que estou dando o caminho copiado é o seguinte **https://stoarantes.file.core.windows.net/fileserver/Departamentos**, o que devemos fazer eh trocar o ***https://*** ficando da seguinte forma: **\\\stoarantes.file.core.windows.net\fileserver\Departamentos**
+No exemplo que estou dando o caminho copiado é o seguinte **https://stoarantes.file.core.windows.net/fileserver/Departamentos**, o que devemos fazer é trocar o ***https://*** ficando da seguinte forma: **\\\stoarantes.file.core.windows.net\fileserver\Departamentos**
 
 ## Concluindo!
 
