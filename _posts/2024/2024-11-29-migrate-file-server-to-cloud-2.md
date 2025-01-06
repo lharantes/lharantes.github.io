@@ -80,7 +80,7 @@ Nesse nosso exemplo iremos manter somente um Azure file share que criamos no art
  ┣ 📂Marketing
  ┣ 📂RH
  ┣ 📂TI
-````
+```
 
 Para conseguirmos isso a idéia segue a mesma de quando administramos um File Server on-premises, primeiro damos permissão no compartilhamento e depois a permissão NTFS nas pastas (que serão preservadas do File Server on-premises ao migrar para o Azure).
 
@@ -94,7 +94,7 @@ Aqui devemos conceder duas permissões, que irei explicar cada uma:
 
 - **Storage File Data SMB Share Contributor**: Permite Ler, Escrever e Apagar arquivos. Essa permissão são para todos os usuários que irá acessar o Azure file share.
 
- ![migrate-file-server-to-azure](/assets/img/28/03.png){: .shadow .rounded-10}
+![migrate-file-server-to-azure](/assets/img/28/03.png){: .shadow .rounded-10}
 
 No exemplo acima demos a permissão de Storage File Data SMB Share Elevated Contributor para o grupo GR-Admins, o processo é o mesmo para a permissão Storage File Data SMB Share Contributor mas deve selecionar os grupos dos usuários que irão acessar o compartilhamento, por exemplo: "GR-Financeiro, GR-RH ou GR-Diretoria".
 
@@ -144,6 +144,16 @@ Temos a seguinte saída do comando acima após a copia dos arquivos:
 Como podemos ver na imagem abaixo, após a cópias dos arquivos para o Azure file share as permissões foram mantidas:
 
 ![migrate-file-server-to-azure](/assets/img/28/08.png){: .shadow .rounded-10}
+
+## Mapear o File share para o usuário
+
+Existem várias maneiras de mapear unidade de rede para os usuários, já trabalhei em empresas que era feito por GPO (Objeto de diretiva de grupo) e também por script de logon, das duas maneiras você precisará do caminho para mapear, vou mostrar como você pode pegar esse caminho.
+
+Para fazer isso você deve abrir o Azure file share e seguir o passo a passo abaixo:
+
+![migrate-file-server-to-azure](/assets/img/28/video3.gif){: .shadow .rounded-10}
+
+No exemplo que estou dando o caminho copiado é o seguinte **https://stoarantes.file.core.windows.net/fileserver/Departamentos**, o que devemos fazer eh trocar o ***https://*** ficando da seguinte forma: **\\\stoarantes.file.core.windows.net\fileserver\Departamentos**
 
 ## Concluindo!
 
