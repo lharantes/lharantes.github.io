@@ -40,8 +40,12 @@ Agora para habilitar propriamente o backup devem os no lado esquerdo selecionar 
 
 - **Storage account lock**: Para proteger seus snapshots contra exclusão acidental da storage account.
 
-
 Depois de configurado só clicar no botão **"Enable backup"** que o backup para o Azure file share estará habilitado.
+
+> Eu particulamente não gosto de selecionar para criar um novo cofre de backup, eu prefiro criar um antes e configurar a replicação como Locally redundant storage (LRS), pois deixando para criar o cofre durante o processo acima ele automaticamente seleciona como Geo-redundant storage (GRS), e com isso o custo é bem maior pois ele replica o seu backup para uma outra região, abaixo um cofre criado automaticamente pelo processo acima:
+{: .prompt-warning }
+
+![migrate-file-server-to-azure](/assets/img/29/06.png){: .shadow .rounded-10}
 
 ## Personalizando a política de backup
 
