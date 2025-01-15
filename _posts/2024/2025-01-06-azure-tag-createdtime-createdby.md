@@ -115,7 +115,7 @@ Você vai ver a variável **$resources** duas vezes, isso porque o comando ***ge
 > Não sou especialista em PowerShell então se você tiver alguma sugestão de alguma melhoria ficarei agradecido com a dica e o script acima dá alguns erros de output mas funciona para o que queremos, então não se preocupe 😂😂
 {: .prompt-info }
 
-No script eu pesquiso nos logs de todos os recursos criados no último dia com a variável `$startTime = $endTime.AddDays(-1)`, e crio um Azure Automation Account para executar todos os dias, você pode conferir como criar o <a href="https://arantes.net.br/posts/azure-automation-account" target="_blank">Azure Automation Account nesse artigo.</a>
+No script eu pesquiso nos logs de todos os recursos criados no último dia com a variável `$startTime = $endTime.AddDays(-1)` e crio um Azure Automation Account para executar todos os dias, você pode conferir como criar o <a href="https://arantes.net.br/posts/azure-automation-account" target="_blank">Azure Automation Account nesse artigo.</a>
 
 ## Concluindo!
 
