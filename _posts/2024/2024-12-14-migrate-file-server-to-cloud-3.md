@@ -69,7 +69,7 @@ Se formos restaurar um arquivo ou pasta individualmente, temos que escolher os a
 
 ![migrate-file-server-to-azure](/assets/img/29/05.png){: .shadow .rounded-10}
 
-> Na imagem acima esta mostrando somente as pastas, caso precise restaurar algum arquivo é so clicar na pasta desejada e ir até o lcoal do arquivo.
+> Na imagem acima esta mostrando somente as pastas, caso precise restaurar algum arquivo é so clicar na pasta desejada e ir até o local do arquivo.
 {: .prompt-info }
 
 ## Concluindo!
