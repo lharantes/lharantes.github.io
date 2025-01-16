@@ -1,7 +1,7 @@
 ---
 #layout: post
 title: "Azure Tag: Inserir tags 'createdOnDate' e 'createdBy' nos recursos de forma automática"
-date: 2024-12-14 01:33:00
+date: 2025-01-12 01:33:00
 categories: [Azure]
 tags: [azure, tag]
 slug: 'azure-tag-createdondate-createdby'
