@@ -5,8 +5,8 @@ date: 2025-01-24 01:33:00
 categories: [Azure]
 tags: [azure, arc, homelab]
 slug: 'azure-arc-homelab'
-# image:
-#   path: assets/img/31/31-header.webp
+image:
+  path: assets/img/31/31-header.webp
 ---
 
 Olá pessoal! Blz?
