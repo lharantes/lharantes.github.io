@@ -38,7 +38,7 @@ Documentação da Microsoft com as <a href="https://learn.microsoft.com/pt-br/az
 
 O Terraform permite você validar o valor inserido para uma variável através de um bloco de validação, cada validação requer um argumento/condição para ser validada e, retornando verdadeiro está ok e caso contrário, podemos personalizar uma mensagem de erro. 
 
-Abaixo você pode consultar um exemplo que podemos usar durante a criação de um Azure Storage Account onde o valor aceito está em uma lista ***"BlobStorage|BlockBlobStorage|FileStorage|Storage|StorageV2"*** caso seja inserido um valor diferente desses, é exibida uma mensagem de erro definida em **error_message**:
+Abaixo você pode consultar um exemplo que podemos usar durante a criação de um Azure Storage Account onde o valor aceito está em uma lista ***"BlobStorage, BlockBlobStorage, FileStorage, Storage or StorageV2"*** caso seja inserido um valor diferente desses, é exibida uma mensagem de erro definida em **error_message**:
 
 ```hcl
 variable "storage_account_kind" {
