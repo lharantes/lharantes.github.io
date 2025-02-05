@@ -10,7 +10,7 @@ image:
 
 Olá pessoal! Blz?
 
-Nesse artigo quero trazer a vocês como eu verifico o conteúdo das minhas variáveis de nome de recursos Azure no Terraform. No Microsoft Azure cada recurso tem uma regra e/ou restrição no nome a ser usado durante a criação do recurso e podemos fazer essa validação no Terraform usando expressões ***REGEX***.
+Nesse artigo quero trazer a vocês como eu verifico o conteúdo das minhas variáveis de nome de recursos Azure no Terraform. No Microsoft Azure cada recurso tem uma regra e/ou restrição no nome a ser usado durante a criação e podemos fazer essa validação no Terraform usando expressões ***REGEX***.
 
 Mas antes de iniciarmos, precisamos falar de dois pontos: **padrão de nomenclatura no Microsoft Azure** e **validação de variável no Terraform.**
 
@@ -20,13 +20,13 @@ Já tenho trabalhado com TI a alguns anos e já vi muitos padrões de nomenclatu
 
 Mas para a cloud sempre há/deveria ter uma nomenclatura fácil de identificar do que se trata o recurso em um simples bater de olhos, itens que você pode identificar pelo nome do recurso: o tipo de recurso, seu ambiente e a região do Azure em que ele é executado. 
 
-A realidade é bem diferente e são poucas empresas que quando você pergunta: "Vocês têm algum padrão de nomenclatura de recursos no Microsoft Azure?" Te respondem positivamente, então para isso a Microsoft disponibiliza uma vasta documentação para adoção de cloud para a empresa, aqui você pode dar uma olhada nessa documentação chamada de <a href="https://learn.microsoft.com/pt-br/azure/cloud-adoption-framework/" target="_blank">CAF (Cloud Adoption Framework)</a>.
+A realidade é bem diferente e são poucas empresas que quando você tem uma resposta positiva a pergunta: "Vocês têm algum padrão de nomenclatura de recursos no Microsoft Azure?", então para isso a Microsoft disponibiliza uma vasta e ótima documentação para adoção/migração para o Microsoft Azure, aqui você pode dar uma olhada nessa documentação chamada de <a href="https://learn.microsoft.com/pt-br/azure/cloud-adoption-framework/" target="_blank">CAF (Cloud Adoption Framework)</a>.
 
 Por exemplo, um endereço IP público (PIP) para uma carga de trabalho de produção do SharePoint na região Oeste dos EUA pode ser **pip-sharepoint-prod-westus-001** e, com isso, ao bater o olho no nome do recurso, fica fácil identificar as informações necessárias para identificar o propósito do recurso.
 
 ![azure-terraform-regex](/assets/img/32/01.png){: .shadow .rounded-10}
 
-Aqui você pode consultar a documentação da Microsoft com as <a href="https://learn.microsoft.com/pt-br/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations" target="_blank">recomendações de abreviações para recursos do Azure.</a>
+A primeira parte do exemplo acima é o tipo de recurso (PIP) e você pode consultar a documentação da Microsoft com as <a href="https://learn.microsoft.com/pt-br/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations" target="_blank">recomendações de abreviações para recursos do Azure.</a>
 
 Cada recurso no Microsoft Azure tem uma regra ou restrição no nome que pode ser dado a ele, por isso ter como controlar quando usamos o Terraform para criar o recurso evita problemas "simples" de execução, direcionando e controlando o nome do recurso, para ficar mais claro, vou dar o exemplo de um recurso no Azure como uma **Storage Account** onde é permitida somente <ins>**letras minúsculas e números com tamanho de 3 a 24 caracteres**</ins>:
 
@@ -57,7 +57,7 @@ Com essa validação do valor da variável, podemos começar a usar isso para va
 
 Uma forma de validar isso é usar REGEX e confesso que isso não é uma maneira que me agrade porque corro de REGEX de uma forma que vocês nem imaginam 😁😁😁.
 
-Vamos assumir o exemplo que demos acima para a criar uma Storage Account, temos como regra para esse recurso que podemos usar caracteres alfanuméricos, mas o tamanho deve ser entre 3 e 24 caracteres, para termos isso usando a condição `"^[a-z0-9]{3,24}$"`, passando isso para o terraform ficaria:
+Vamos assumir o exemplo que demos acima para a criar uma Storage Account, temos como regra para o nome desse recurso que podemos usar caracteres alfanuméricos, mas o tamanho deve ser entre 3 e 24 caracteres, para termos isso usando a condição `"^[a-z0-9]{3,24}$"`, passando isso para o terraform ficaria:
 
 ```hcl
 variable storage_account_name {
@@ -72,11 +72,11 @@ variable storage_account_name {
 
 Caso seja inserido um valor no conteúdo da variável que retorne falso na condição, como por exemplo o uso de algum simbolo iremos receber a mensagem de erro que definimos em **error_message**.
 
-Eu entendo que não é fácil montar expressões regex e eu uso <a href="https://regexr.com/" target="_blank"> esse site para validar a expressão regex </a> e para consultar o que cada item significa, temos <a href="https://www3.ntu.edu.sg/home/ehchua/programming/howto/Regexe.html" target="_blank"> esse site sobre regex. </a>
+Eu entendo que não é fácil montar expressões regex e eu uso <a href="https://regexr.com/" target="_blank"> esse site para validar a expressão regex </a> e para consultar o que cada item significa eu uso <a href="https://www3.ntu.edu.sg/home/ehchua/programming/howto/Regexe.html" target="_blank"> esse site sobre regex. </a>
 
 Para não ficar montando as expressões regex sempre do zero, tem um repositório do <a href="https://github.com/Azure/terraform-azurerm-naming/blob/master/main.tf" target="_blank"> Azure no GitHub </a> e eu consulto e adapto ao que preciso, por exemplo:
 
-Desejo criar uma virtual network, eu busco no documento da Microsoft que deixei acima qual a regra/requisito para o nome desse recurso, a regra é **Caracteres alfanuméricos, sublinhados, pontos e hífens**, com o tamanho de 2 a 64 caracteres, então eu vou à página do GitHub que deixei acima e procuro pelo recurso de virtual network como na imagem abaixo:
+Desejo criar uma virtual network, eu busco no documento da Microsoft que deixei acima qual a regra/requisito para o nome desse recurso, a regra é **caracteres alfanuméricos, sublinhados, pontos e hífens**, com o tamanho de 2 a 64 caracteres, então eu vou à página do GitHub que deixei acima e procuro pelo recurso de virtual network como na imagem abaixo:
 
 ![azure-terraform-regex](/assets/img/32/03.png){: .shadow .rounded-10}
 
@@ -92,7 +92,7 @@ variable vnet_name {
 }
 ```
 
-Agora se o valor inserido não for aceito uma mensagem de erro mais intuitiva nos será apresentada e podemos de forma rápida identificar o problema.
+Agora se o valor inserido não for aceito teremos uma mensagem de erro mais intuitiva que nos será apresentada e podemos de forma rápida identificar o problema.
 
 ## Concluindo!
 
