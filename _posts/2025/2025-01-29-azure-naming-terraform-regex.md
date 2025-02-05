@@ -104,6 +104,6 @@ Bom pessoal, eu tenho usado isso em alguns ambientes e acredito que possa ser be
 
 <a href="https://learn.microsoft.com/pt-br/azure/cloud-adoption-framework/" target="_blank">CAF (Cloud Adoption Framework)</a>
 
-<a href="https://learn.microsoft.com/pt-br/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations" target="_blank">recomendações de abreviações para recursos do Azure</a>
+<a href="https://learn.microsoft.com/pt-br/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations" target="_blank">Recomendações de abreviações para recursos do Azure</a>
 
 Compartilhe o artigo com seus amigos clicando nos icones abaixo!!!
