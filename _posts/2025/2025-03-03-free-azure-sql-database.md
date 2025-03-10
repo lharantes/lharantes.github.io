@@ -54,7 +54,7 @@ Eu não posso negar que para um banco de dados para um serviço pequeno é muito
 
 - **A oferta gratuita do Azure SQL Database não pode fazer parte de um pool elástico ou de um grupo de failover.**
 
-> Só pelo fato de não ter o SLA não é possível que ainda queirão usar em propdução 😁😁😁😁.
+> Só pelo fato de não ter o SLA não é possível que ainda desejam usar em propdução 😁😁😁😁.
 {: .prompt-tip }
 
 Então na minha opinião a resposta para a pergunta desse artigo é ***"Não, eu não recomendo o uso em ambiente de produção, é um excelente recurso para se usar em ambiente de desenvolvimento e testes"***.
