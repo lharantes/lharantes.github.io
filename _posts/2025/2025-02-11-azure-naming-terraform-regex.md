@@ -1,6 +1,6 @@
 ---
 title: "Terraform validando nome de recursos Azure com expressões regex"
-date: 2025-02-04 01:33:00
+date: 2025-02-11 01:33:00
 categories: [Devops, Terraform]
 tags: [devops, terraform, azure]
 slug: 'azure-naming-terraform-regex'

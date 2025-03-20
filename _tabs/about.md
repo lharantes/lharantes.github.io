@@ -19,4 +19,6 @@ Abaixo compartilho algumas certificações que possuo atualmente:
 | ![Azure Network](/assets/img/about/azure-network.png) | ![Azure AVD](/assets/img/about/azure-avd.png) | ![Azure Security](/assets/img/about/azure-security.png) |
 | ![AWS Practitioner](/assets/img/about/aws-practitioner.png) | ![MCT](/assets/img/about/mct.png) |  |
 
+![MVP](/assets/img/about/mvp.png){:height="50%" width="50%"}
+
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Farantes.net.br&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
