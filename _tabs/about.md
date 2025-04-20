@@ -17,7 +17,7 @@ Abaixo compartilho algumas certificações que possuo atualmente:
 | ![Azure Architect](/assets/img/about/azure-architect.png) | ![AWS Architect](/assets/img/about/aws-architect.png) | ![Azure Devops](/assets/img/about/azure-devops.png) |
 | ![Terraform](/assets/img/about/terraform.png) | ![GCP Architect](/assets/img/about/gcp-architect.png) | ![azure-administrator](/assets/img/about/azure-administrator.png) |
 | ![Azure Network](/assets/img/about/azure-network.png) | ![Azure AVD](/assets/img/about/azure-avd.png) | ![Azure Security](/assets/img/about/azure-security.png) |
-| ![AWS Practitioner](/assets/img/about/aws-practitioner.png) | ![MCT](/assets/img/about/mct.png) |  |
+| ![AWS Practitioner](/assets/img/about/aws-practitioner.png) | ![MCT](/assets/img/about/mct.png) | ![HashiCorp](/assets/img/about/hashicorp.png)  |
 
 ![MVP](/assets/img/about/mvp.png){:height="50%" width="50%"}
 
