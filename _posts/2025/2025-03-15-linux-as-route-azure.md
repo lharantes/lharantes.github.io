@@ -1,6 +1,6 @@
 ---
 title: "Rede Hub-Spoke no Azure usando o Linux como roteador (NVA - Network Virtual Appliance)"
-date: 2025-04-05 01:33:00
+date: 2025-04-05 01:00:00
 categories: [Azure]
 tags: [azure, linux]
 slug: 'linux-as-router-azure'
