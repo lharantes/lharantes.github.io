@@ -157,6 +157,3 @@ Bom pessoal, eu tenho usado isso em alguns ambientes e acredito que possa ser be
 <a href="https://learn.microsoft.com/pt-br/azure/virtual-network/virtual-networks-udr-overview" target="_blank">TRoteamento de tráfego de rede virtual</a>
 
 Compartilhe o artigo com seus amigos clicando nos icones abaixo!!!
-
-
-![outbound-internet-azure](/assets/img/34/05.png){: .shadow .rounded-10}
