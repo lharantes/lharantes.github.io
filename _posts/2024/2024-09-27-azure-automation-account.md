@@ -132,7 +132,13 @@ $Secret = Get-AutomationVariable -Name 'Secret'
 
 ## Instalando módulos necessários
 
-O Azure Automation Account ja trás alguns modulos do powershell instalados, mas pode acontecer de o seu script usar algum módulo que não vem, com isso é preciso fazer a instalação para que o script execute com sucesso. Para instalar módulos temos que ir em **"shared resources"** -> **"Modules"** -> **"Add a module"**
+O Azure Automation Account ja trás alguns modulos do powershell instalados, mas pode acontecer de o seu script usar algum módulo que não vem, abaixo deixo um exemplo dos módulos que foram necessários no artigo anterior sobre <a href="https://arantes.net.br/posts/service-principal-secret-certificate-expire-report/" target="_blank">enviar um e-mail com o Services principals e certificados perto de expirarem</a>, com isso é preciso fazer a instalação para que o script execute com sucesso. Para instalar módulos temos que ir em **"shared resources"** -> **"Modules"** -> **"Add a module"**
+
+Lista de módulos que usamos no artigo anterior:
+- **Microsoft.Graph.Applications**
+- **Microsoft.Graph.Authentication**
+- **Microsoft.Graph.Mail**
+- **Microsoft.Graph.Users.Actions**
 
 ![azure-automation-account](/assets/img/24/12.png){: .shadow .rounded-10}
 
