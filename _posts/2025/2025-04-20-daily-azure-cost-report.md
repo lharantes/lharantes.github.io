@@ -54,6 +54,14 @@ O script abaixo em PowerShell, basicamente, se conecta a assinatura que deseja e
 
 Para o envio diário do e-mail estou usando uma Azure Automation Account e você pode consultar como fazer isso no artigo <a href="https://arantes.net.br/posts/azure-automation-account/" target="_blank">Automatizar tarefas com o Azure Automation Account</a>.
 
+### Pré-requisitos
+
+- Powershell instalado se for executar localmente ou Azure Automation Account se for automatizar o envio.
+- Permissões da identidade gerenciada: `Cost management reader` nas Assinaturas que irá gerar o custo.
+- Azure PowerShell Modules: `Microsoft.Graph.Applications`, `Microsoft.Graph.Authentication`, `Microsoft.Graph.Mail` e `Microsoft.Graph.Users.Actions`.
+
+Abaixo o script completo para gerar o relatório:
+
 ```powershell
 # Variaveis para conectar ao Entra ID
 $ClientId       = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
