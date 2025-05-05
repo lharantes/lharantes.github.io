@@ -1,5 +1,5 @@
 ---
-title: "Relatório diário de custos no Microsoft Azure"
+title: "Relatório diário por e-mail de custos no Microsoft Azure"
 date: 2025-04-20 01:00:00
 categories: [Azure]
 tags: [azure, powershell]
