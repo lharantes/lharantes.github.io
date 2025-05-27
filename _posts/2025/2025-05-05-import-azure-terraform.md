@@ -140,6 +140,9 @@ No arquivo **main.tf** é gerado o código Terraform de todos os recursos que ha
 
 ![import-azure-terraform](/assets/img/37/04.png){: .shadow .rounded-10}
 
+> Temos 2 (duas) opções importantes que são **--overwrite, -f** e **--append**, o primeiro sobescreve tudo que já existe no diretório e o **append** ele importa os recursos para um arquivo de estado existente.   
+{: .prompt-tip } 
+
 ## Alguns exemplos de uso para o dia a dia
 
 Vou colocar algumas opções de parâmetros que pode ser útil no dia a dia, mas como falei acima a ferramenta tem muitas opçoes e é melhor consultá-las com `aztfexport --help`.
