@@ -207,6 +207,36 @@ aztfexport query --backend-type=azurerm \
             --backend-config=key=terraform.tfstate -n "resourceGroup =~ 'rg-network'" 
 ```
 
+## Importar todos os resource groups da Assinatura
+
+No exemplo abaixo eu fiz um script simples em Powershell para pegar todos os resource groups da assinatura e gerar apenas o código Terraform dos recursos, os recursos ficarão separados por pastas como no exemplo abaixo:
+
+![import-azure-terraform](/assets/img/37/06.png){: .shadow .rounded-10}
+
+Segue o script para gerar os códigos Terraform dos recursos:
+
+```powershell
+$rgs = get-azresourcegroup
+
+foreach ($rg in $rgs) {
+
+    $rgName = $rg.ResourceGroupName
+
+    if ((-not $rgName.StartsWith("DefaultResourceGroup")) -and (-not $rgName.StartsWith("NetworkWatcherRG"))) {
+     
+     # Cria um diretorio com o nome do resource group 
+     $dir = "C:\Temp\terraform\" + $rg.ResourceGroupName
+     New-Item -Path $dir -ItemType "Directory"
+
+     aztfexport rg -n --include-role-assignment --hcl-only --output-dir $dir $rg.ResourceGroupName 
+
+    }
+}
+```
+
+> Podemos usar o parâmetro **--output-dir** para informar o caminho do diretório que desejamos que seja salvo os arquivos.
+{: .prompt-tip } 
+
 ## Concluindo!
 
 Usar a ferramenta **aztfexport** é uma escolha estratégica para equipes que buscam maior controle, rastreabilidade e padronização da infraestrutura em Azure. Ela permite extrair automaticamente recursos existentes no Azure e convertê-los em código Terraform, economizando tempo e reduzindo erros humanos no processo de criação de arquivos de configuração. Além disso, facilita a adoção de boas práticas DevOps, como versionamento de infraestrutura, revisões em pull requests e integração com pipelines CI/CD. Em resumo, o aztfexport acelera a transição para IaC com menos esforço e mais segurança, promovendo agilidade, governança e consistência na gestão da nuvem.
