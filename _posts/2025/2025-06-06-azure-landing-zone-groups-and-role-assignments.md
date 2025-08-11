@@ -19,6 +19,8 @@ O primeiro artigo gostaria de demonstrar como ***criar um grupo no Microsoft Ent
 > No último artigo vou "juntar" os módulos que criamos no decorrer dessa série e montar um projeto Terraform para automatizar a criação da Azure Landing Zone.
 {: .prompt-tip }
 
+Você pode ir conferindo o código no <a href="https://github.com/lharantes/azure-landing-zone-terraform" target="_blank">repositório no GitHub</a>.
+
 
 ## O que é uma Azure Landing Zone
 
