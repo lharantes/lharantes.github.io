@@ -12,7 +12,7 @@ Olá pessoal! Blz?
 
 Eu quero trazer uma série de artigos em que tenho trabalhado que é a criação de código Terraform para setup de uma **Azure Landing Zone**, pouco tempo atrás a Microsoft disponibilizou o <a href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/deploy-landing-zones-with-terraform" target="_blank">Aceleradores de Landing Zone do Azure para Bicep e Terraform</a>, mas eu preferi criar meus próprios módulos conforme vou precisando e moldando eles da forma que preciso, com isso me forço a estudar e praticar o uso de Terraform.
 
-Teremos um conjunto de artigos onde no final teremos a possiblidade de automatizar uma Azure Landing Zone e moldar isso como precisamos. Talvez esses meus artigos sejam para ambientes pequenos e médios, onde não temos uma Azure Landing Zone tão segregada com várias Assinaturas e Grupos de Gerenciamentos.
+Teremos um conjunto de artigos onde no final teremos a possibilidade de automatizar uma Azure Landing Zone e moldar isso como precisamos. Talvez esses meus artigos sejam para ambientes pequenos e médios, onde não temos uma Azure Landing Zone tão segregada com várias Assinaturas e Grupos de Gerenciamentos.
 
 O primeiro artigo gostaria de demonstrar como ***criar um grupo no Microsoft Entra ID, adicionar membros a esse grupo e depois adicionar permissões Azure RBAC a esse grupo*** tudo isso através de Terraform.
 
@@ -48,14 +48,24 @@ Abaixo uma imagem da Microsoft onde demonstra o uso de uma Azure Landing Zone:
 
 O gerenciamento de acesso para recursos de nuvem é uma função crítica para qualquer organização que esteja usando a nuvem. O RBAC do Azure (controle de acesso baseado em funções do Azure) ajuda a gerenciar quem tem acesso aos recursos do Azure, o que pode fazer com esses recursos e a quais áreas tem acesso.
 
-Nesse artigo como mencionei acima vamos criar as permissões da forma que esperamos que ela seja gerenciada, ou seja, através de grupos e adicionando os usuários a esse grupo. Usar grupos para conceder permissões no Azure é considerado uma boa prática porque traz organização, segurança e eficiência pois seria somente adicionar e/ou remover usuários dos grupos quando ele não mais precisa daquela permissão.
+Nesse artigo como mencionei acima vamos criar as permissões da forma que esperamos que ela seja gerenciada, ou seja, através de grupos e adicionando os usuários a esse grupo. Usar grupos para conceder permissões no Azure é considerado uma boa prática porque traz organização, segurança e eficiência, pois seria somente adicionar e/ou remover usuários dos grupos quando ele não mais precisa daquela permissão.
 
 No Azure, você atribui permissões em um escopo e um escopo em quatro níveis: **grupo de gerenciamento**, **assinatura**, **grupo de recursos** ou **recurso**. Os escopos são estruturados em uma relação pai-filho. Você pode atribuir funções em qualquer um desses níveis de escopo que o nível abaixo irá herdar essas permissões.
 
 ![azure-landing-zone-groups-and-role-assignments](/assets/img/39/02.png){: .shadow .rounded-10}
 
-> Aqui estou dando as dicas de como fazer, procure estruturar isso da melhor forma para o seu ambiente, **SE** no seu ambiente a melhor opção é atribuir a permissão no **Grupo de Gerenciamento** então faça, tem ambientes que atribuir a permissão na Assinatura é o melhor cenário. Lembre-se antes de criticar: **"Cada ambiente tem a sua particulariedade".**
+> Aqui estou dando as dicas de como fazer, procure estruturar isso da melhor forma para o seu ambiente, **SE** no seu ambiente a melhor opção é atribuir a permissão no **Grupo de Gerenciamento** então faça, tem ambientes que atribuir a permissão na Assinatura é o melhor cenário. Lembre-se antes de criticar: **"Cada ambiente tem a sua particularidade".**
 {: .prompt-info }
+
+Abaixo algumas sugestões de como eu organizo os grupos e permissões iniciais, depois cada caso é um caso e vai adaptando conforme a necessidade:
+
+| Nome do Grupo | Permissão | Descrição |
+| ------------- | ------------ | --------- |
+| GRP-Owner     | Owner     | Acesso Irrestrito no escopo definido |
+| GRP-Infra     | Contributor     | Criar recursos no escopo definido |
+| GRP-Sustentacao    | Reader     | Acesso de leitura no escopo definido |
+| GRP-Finops    | Cost Management Contributor     | Administrar o custo no escopo definido |
+| GRP-Terceiros    | Contributor     | Criar recursos no escopo definido |
 
 ## Organização do código Terraform
 
@@ -77,7 +87,7 @@ Os códigos abaixo estão separados para usarmos em módulos, e o principal obje
 
 ## Automatizar a criação de Grupos no Entra Id com Terraform
 
-> Em ambientes híbridos onde os grupos e usuários geralmente são sincronizados entre um **Active Directory local** e o **Azure** você não precisa recriar os grupos e sim **usar ele mais adiante** quando chegarmos na parte de dar permissões.
+> Em ambientes híbridos onde os grupos e usuários são geralmente sincronizados entre um **Active Directory local** e o **Azure** você não precisa recriar os grupos e sim **usar ele mais adiante** quando chegar na parte de dar permissões.
 {: .prompt-info }
 
 No Microsoft Azure você pode dar permissões usando usuário, grupos de usuários e service principal, nesse exemplo e como uma boa prática iremos dar permissões a grupos, para isso vamos criar um grupo de usuário e inserir usuários nesse grupo, e faremos isso usando Terraform.
@@ -186,7 +196,7 @@ output "group_name" {
 
 No código acima criamos o grupo no Entra ID e inserimos os membros dentro do grupo, no código Terraform abaixo iremos dar permissão a esse grupo no Microsoft Azure. 
 
-Já explicamos que a permissão é concedida a nível de escopo, para isso devemos ter um cuidado a usar a formatação necessárias para especificar os escopos pois é necessário que estejam da maneira abaixo:
+Já explicamos que a permissão é concedida ao nível de escopo, para isso devemos ter um cuidado a usar a formatação necessárias para especificar os escopos, pois é necessário que estejam da maneira abaixo:
 
 - **Assinaturas:** /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333
 - **Grupo de Recurso:** /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/**myGroup**
@@ -254,7 +264,7 @@ DESCRIPTION
 
 ## Como usar os módulos Terraform
 
-Nesse primeiro artigo já temos dois módulos construídos, uma para criar grupos no Entra Id e adicionar usuários ao grupo e outro para adcionar a permissão ao Microsoft Azure, para usarmos esses módulos temos um arquivo ***main.tf*** fora da pasta módulos (root folder) onde iremos fazer a chamada as módulos criados:
+Nesse primeiro artigo já temos dois módulos construídos, uma para criar grupos no Entra Id e adicionar usuários ao grupo e outro para adicionar a permissão ao Microsoft Azure, para usarmos esses módulos tem um arquivo ***main.tf*** fora da pasta módulos (root folder) onde iremos fazer a chamada aos módulos criados:
 
 ```shell
 📦Azure_Landing_Zone
@@ -299,7 +309,7 @@ module "subscription_assignment" {
 }
 ```
 
-> Lembrando que para darmos permissões no Microsoft Azure precisamos ter a permissão de **Owner** ou **User Access Administrator** para quem estiver executando o código.
+> Lembrando que para dar permissões no Microsoft Azure precisamos ter a permissão de **Owner** ou **User Access Administrator** para quem estiver executando o código.
 {: .prompt-warning }
 
 Verificando no Microsoft Entra ID se o grupo foi criado e os membros associados:
@@ -322,7 +332,7 @@ Para pegar o Object Id é mais fácil abrir o grupo clicando nele e copiar como 
 
 ![azure-landing-zone-groups-and-role-assignments](/assets/img/39/06.png){: .shadow .rounded-10}
 
-com o ID copiado é só inserir em uma variável no Terraform ou diretamente na chamado do módulo:
+Com o ID copiado é só inserir em uma variável no Terraform ou diretamente na chamada do módulo:
 
 ```hcl
 module "subscription_assignment" {
