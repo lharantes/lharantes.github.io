@@ -3,7 +3,7 @@ title: "Azure Landing Zone: Como Nomenclatura e Tags Definem o Sucesso da sua Nu
 date: 2025-06-20 01:00:00
 categories: [Devops, Terraform]
 tags: [devops, azure, terraform]
-slug: 'azure-landing-naming-tagging'
+slug: 'azure-landing-zone-naming-tagging'
 image:
   path: assets/img/40/40-header.webp
 ---
