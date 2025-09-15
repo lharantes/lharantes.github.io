@@ -65,7 +65,9 @@ Abaixo um exemplo de um recurso de IP público para uma carga SharePoint de prod
 
 Como já temos e/ou deveríamos ter definido a nomenclatura que iremos adotar, o próximo passo é como controlar isso usando o Terraform. Em meus projetos Terraform eu costumo ter algumas variáveis que me ajudam a compor os nomes e tags, além de valores obrigatórios para criar recursos como a região.
 
-No exemplo abaixo no campo `name` temos um exemplo de código Terraform para definir o nome de uma Rede Virtual no Azure:
+No exemplo abaixo no campo `name` temos um exemplo de código Terraform para definir o nome de uma Rede Virtual no Azure, para isso concatenamos algumas palavras como: **vnet**, **abreviação da região**, **um nome curto do projeto ou propósito** e o **ambiente (dev, hml ou prd)**. A função `lower` é para deixar tudo minúsculo:
+
+`lower("vnet-${lookup(local.regions, var.location, false)}-${var.project}-${var.environment}")`
 
 ```hcl
 locals {
