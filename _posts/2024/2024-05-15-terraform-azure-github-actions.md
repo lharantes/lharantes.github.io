@@ -90,6 +90,7 @@ Abaixo segue um exemplo de script yaml para deploy de recursos no Microsoft Azur
 {: .prompt-warning }
 
 ```yaml
+{% raw %}
 name: 'Deploy Terraform on Microsoft Azure'
 # Gatilho para executar a pipeline
 on:
@@ -133,6 +134,7 @@ jobs:
     - name: Terraform Apply
       working-directory: ${{ env.working-directory }}
       run: terraform apply -auto-approve
+{% endraw %}
 ```
 
 <br>
