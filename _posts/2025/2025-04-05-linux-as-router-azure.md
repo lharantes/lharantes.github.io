@@ -154,6 +154,6 @@ Bom pessoal, eu tenho usado isso em alguns ambientes e acredito que possa ser be
 
 <a href="https://learn.microsoft.com/pt-br/azure/architecture/networking/architecture/hub-spoke" target="_blank">Topologia de rede hub-spoke no Azure</a>
 
-<a href="https://learn.microsoft.com/pt-br/azure/virtual-network/virtual-networks-udr-overview" target="_blank">TRoteamento de tráfego de rede virtual</a>
+<a href="https://learn.microsoft.com/pt-br/azure/virtual-network/virtual-networks-udr-overview" target="_blank">Roteamento de tráfego de rede virtual</a>
 
 Compartilhe o artigo com seus amigos clicando nos icones abaixo!!!

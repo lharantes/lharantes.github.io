@@ -69,7 +69,11 @@ Abaixo algumas sugestões de como eu organizo os grupos e permissões iniciais, 
 
 ## Organização do código Terraform
 
-Nesses artigos vamos organizar nossos módulos Terraform da forma abaixo, onde temos uma pasta módulos e depois uma pasta para cada item que formos criar:
+Nesses artigos vamos organizar nossos módulos Terraform da forma abaixo, onde temos uma pasta módulos e depois uma pasta para cada item que formos criar, onde teremos distribuidos da seguinte forma:
+
+- **main.tf**: onde será criado o/os recursos
+- **variables.tf**: onde ficará as variáveis necessárias
+- **output.tf**: as saídas dos recursos para serem reutilizados por outros recursos
 
 ```shell
 📦modules
