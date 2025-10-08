@@ -1,6 +1,6 @@
 ---
 title: "Azure Landing Zone: Virtual network & Subnet com Terraform"
-date: 2025-07-07 01:00:00
+date: 2025-07-22 01:00:00
 categories: [Devops, Terraform]
 tags: [devops, azure, terraform]
 slug: 'azure-landing-zone-networking'
