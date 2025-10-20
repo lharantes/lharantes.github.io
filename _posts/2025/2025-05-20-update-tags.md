@@ -10,7 +10,7 @@ image:
 
 Olá pessoal! Blz?
 
-Às vezes não nos preocupamos com as TAGs quando criamos recursos no Microsoft Azure, seja por não ter um padrão definido e/ou ter que ficar pensando no que colocar e com certeza isso será ignorado e o recurso será criado sem TAGs.
+Às vezes não nos preocupamos com as TAGs quando criamos recursos no Microsoft Azure, seja por não ter um padrão definido e/ou ter que ficar pensando no que colocar e com certeza isso será ignorado e o recurso será criado sem TAGS.
 
 Na minha opinião definir quais serão as TAGs deve ser um dos primeiros passos definidos em um planejamento do ambiente Azure, mas pode acontecer de você pegar um ambiente já com vários e vários recursos criados e em um certo momento você quer padronizar o uso de TAGs e com isso precisa preencher as TAGs nos recursos existentes.
 
