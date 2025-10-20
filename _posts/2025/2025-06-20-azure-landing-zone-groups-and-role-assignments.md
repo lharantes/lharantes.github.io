@@ -54,7 +54,7 @@ No Azure, você atribui permissões em um escopo e um escopo em quatro níveis: 
 
 ![azure-landing-zone-groups-and-role-assignments](/assets/img/39/02.png){: .shadow .rounded-10}
 
-> Aqui estou dando as dicas de como fazer, procure estruturar isso da melhor forma para o seu ambiente, **SE** no seu ambiente a melhor opção é atribuir a permissão no **Grupo de Gerenciamento** então faça, tem ambientes que atribuir a permissão na Assinatura é o melhor cenário. Lembre-se antes de criticar: **"Cada ambiente tem a sua particularidade".**
+> Aqui estou dando as dicas de como fazer, procure estruturar isso da melhor forma para o seu ambiente, **SE** no seu ambiente a melhor opção é atribuir a permissão no **Grupo de Gerenciamento** então faça, tem ambientes que atribuir a permissão na Assinatura é o melhor cenário. Lembre-se antes de criticar: **"Cada ambiente tem a sua particularidade"**.
 {: .prompt-info }
 
 Abaixo algumas sugestões de como eu organizo os grupos e permissões iniciais, depois cada caso é um caso e vai adaptando conforme a necessidade:
