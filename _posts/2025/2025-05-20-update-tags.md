@@ -5,7 +5,7 @@ categories: [Azure, Finops]
 tags: [finops, azure]
 slug: 'update-tags'
 image:
-  path: assets/img/38/38-header.webp
+  path: /assets/img/38/38-header.webp
 ---
 
 Olá pessoal! Blz?
