@@ -23,7 +23,7 @@ description: >- # used by seo meta and the atom feed
 
 seo:
   keywords: terraform, cloud, azure, devops, azure devops, terraform, aws
-  description: "Personal blog about Cloud Computing, Azure, AWS, GCP and Terraform"
+  description: "Personal blog about Cloud Computing, Azure, AWS and Terraform"
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
