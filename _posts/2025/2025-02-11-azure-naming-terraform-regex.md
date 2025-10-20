@@ -5,7 +5,7 @@ categories: [Devops, Terraform]
 tags: [devops, terraform, azure]
 slug: 'azure-naming-terraform-regex'
 image:
-  path: assets/img/32/32-header.webp
+  path: /assets/img/32/32-header.webp
 ---
 
 Olá pessoal! Blz?
