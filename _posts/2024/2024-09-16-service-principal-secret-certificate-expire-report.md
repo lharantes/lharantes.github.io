@@ -6,7 +6,7 @@ categories: [Azure, Powershell]
 tags: [azure, powershell]
 slug: 'service-principal-secret-certificate-expire-report'
 image:
-  path: assets/img/23/23-header.webp
+  path: /assets/img/23/23-header.webp
 ---
 
 Olá pessoal! Blz?

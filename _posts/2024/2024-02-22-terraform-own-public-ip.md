@@ -5,7 +5,7 @@ slug: 'terraform-own-public-ip'
 categories: ['Azure', 'Terraform']
 tags: ['Azure', 'Terraform']
 image:
-  path: assets/img/01/01-header.webp
+  path: /assets/img/01/01-header.webp
 ---
 
 Olá pessoal! Blz?

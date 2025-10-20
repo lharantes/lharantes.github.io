@@ -5,7 +5,7 @@ categories: [Azure]
 tags: [azure, linux]
 slug: 'linux-as-router-azure'
 image:
-  path: assets/img/35/35.webp
+  path: /assets/img/35/35.webp
 ---
 
 Olá pessoal! Blz?

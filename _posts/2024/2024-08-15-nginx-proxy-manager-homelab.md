@@ -6,7 +6,7 @@ categories: [Homelab]
 tags: [Homelab, nginx, devops]
 slug: 'nginx-proxy-manager-homelab'
 image:
-  path: assets/img/19/19-header.webp
+  path: /assets/img/19/19-header.webp
 ---
 
 Olá pessoal! Blz?

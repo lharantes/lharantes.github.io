@@ -5,7 +5,7 @@ slug: 'create-certificate-letsencrypt'
 categories: ['Devops', 'Docker']
 tags: ['Devops', 'LetsEncrypt', 'Docker']
 image:
-  path: assets/img/09/09-header.webp
+  path: /assets/img/09/09-header.webp
 ---
 
 Olá pessoal! Blz?

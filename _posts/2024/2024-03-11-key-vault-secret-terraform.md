@@ -5,7 +5,7 @@ slug: 'key-vault-secret-terraform'
 categories:  ['Azure', 'Terraform']
 tags:  ['Azure', 'Terraform', 'Key Vault']
 image:
-  path: assets/img/05/05-header.webp
+  path: /assets/img/05/05-header.webp
 ---
 
 Olá pessoal! Blz?

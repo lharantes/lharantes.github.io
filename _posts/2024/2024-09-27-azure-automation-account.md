@@ -6,7 +6,7 @@ categories: [Azure]
 tags: [azure, automation]
 slug: 'azure-automation-account'
 image:
-  path: assets/img/24/24-header.webp
+  path: /assets/img/24/24-header.webp
 ---
 
 Olá pessoal! Blz?

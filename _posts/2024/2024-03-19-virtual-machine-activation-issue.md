@@ -5,7 +5,7 @@ slug: 'virtual-machine-activation-issue'
 categories:  ['Azure']
 tags: ['Azure', 'Microsoft Windows']
 image:
-  path: assets/img/06/06-header.webp
+  path: /assets/img/06/06-header.webp
 ---
 
 Olá pessoal! Blz?

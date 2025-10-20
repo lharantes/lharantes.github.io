@@ -6,7 +6,7 @@ categories: [Azure, Security]
 tags: [azure, security, avd, entraid]
 slug: 'azure-virtual-desktop-mfa-enforced'
 image:
-  path: assets/img/18/18-header.webp
+  path: /assets/img/18/18-header.webp
 ---
 
 Olá pessoal! Blz?

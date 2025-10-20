@@ -6,7 +6,7 @@ slug: 'azure-powershell-commands'
 categories:  ['Azure', 'Powershell']
 tags:  ['Azure', 'Powershell']
 image:
-  path: assets/img/15/15-header.webp
+  path: /assets/img/15/15-header.webp
 ---
 
 Olá pessoal! Blz?

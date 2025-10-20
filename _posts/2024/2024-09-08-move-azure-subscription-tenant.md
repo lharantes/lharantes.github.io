@@ -6,7 +6,7 @@ categories: [Azure]
 tags: [azure, migrate]
 slug: 'move-azure-subscription-tenant'
 image:
-  path: assets/img/21/21-header.webp
+  path: /assets/img/21/21-header.webp
 ---
 
 Olá pessoal! Blz?

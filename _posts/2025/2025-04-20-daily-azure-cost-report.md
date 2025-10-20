@@ -5,7 +5,7 @@ categories: [Azure]
 tags: [azure, powershell]
 slug: 'daily-azure-cost-report'
 image:
-  path: assets/img/36/36-header.webp
+  path: /assets/img/36/36-header.webp
 ---
 
 Olá pessoal! Blz?

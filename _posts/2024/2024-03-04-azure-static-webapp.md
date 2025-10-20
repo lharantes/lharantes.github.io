@@ -5,7 +5,7 @@ slug: 'azure-static-webapp'
 categories:  ['Azure']
 tags: ['Azure', 'Blog', 'Azure Devops', 'GitHub']
 image:
-  path: assets/img/04/04-header.webp
+  path: /assets/img/04/04-header.webp
 ---
 
 Olá pessoal! Blz?

@@ -5,7 +5,7 @@ categories: [Devops, Terraform]
 tags: [azure, terraform, devops]
 slug: 'outbound-internet-azure'
 image:
-  path: assets/img/34/34-header.webp
+  path: /assets/img/34/34-header.webp
 ---
 
 Olá pessoal! Blz?

@@ -6,7 +6,7 @@ categories: ['Azure', 'Devops', 'Kubernetes', 'Ansible']
 tags: ['Azure', 'Devops', 'Kubernetes', 'Ansible']
 slug: 'cluster-kubernetes-azure-terraform-ansible-parte-02'
 image:
-  path: assets/img/17/17-header.png
+  path: /assets/img/17/17-header.png
 ---
 
 Olá Pessoal! Blz?

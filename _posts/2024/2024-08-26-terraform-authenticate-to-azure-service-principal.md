@@ -6,7 +6,7 @@ categories: [Terraform, Azure]
 tags: [azure, terraform]
 slug: 'terraform-authenticate-to-azure-service-principal'
 image:
-  path: assets/img/20/20-header.webp
+  path: /assets/img/20/20-header.webp
 ---
 
 Olá pessoal! Blz?

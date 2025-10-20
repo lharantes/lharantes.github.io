@@ -6,7 +6,7 @@ categories: [HomeLab, Proxmox]
 tags: [homelab, proxmox, ansible]
 slug: 'create-config-vm-proxmox-ansible'
 image:
-  path: assets/img/26/26-header.webp
+  path: /assets/img/26/26-header.webp
 ---
 
 Olá pessoal! Blz?

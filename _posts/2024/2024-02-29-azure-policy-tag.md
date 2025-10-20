@@ -5,7 +5,7 @@ slug: 'azure-policy-tag'
 categories:  ['Azure']
 tags: ['Azure', 'Policy']
 image:
-  path: assets/img/02/02-header.webp
+  path: /assets/img/02/02-header.webp
 ---
 
 Olá pessoal! Blz?

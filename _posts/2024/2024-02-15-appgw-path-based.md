@@ -5,7 +5,7 @@ slug: 'appgw-path-based'
 categories:  ['Azure', 'Terraform']
 tags:  ['Azure', 'Terraform', 'Application Gateway']
 image:
-  path: assets/img/03/03-header.webp
+  path: /assets/img/03/03-header.webp
 ---
 
 Olá pessoal! Blz?

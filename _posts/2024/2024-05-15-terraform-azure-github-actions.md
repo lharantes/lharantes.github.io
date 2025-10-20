@@ -6,7 +6,7 @@ slug: 'terraform-azure-github-actions'
 categories:  ['Azure', 'Terraform', 'Devops']
 tags:  ['Azure', 'Terraform', 'Devops', 'GitHub Actions']
 image:
-  path: assets/img/12/12-header.webp
+  path: /assets/img/12/12-header.webp
 ---
 
 Olá pessoal! Blz?

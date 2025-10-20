@@ -5,7 +5,7 @@ slug: 'copy-azure-managed-disk-between-regions'
 categories: ['Azure', 'Powershell']
 tags: ['Azure', 'Powershell']
 image:
-  path: assets/img/10/10-header.webp
+  path: /assets/img/10/10-header.webp
 ---
 
 Olá pessoal! Blz?

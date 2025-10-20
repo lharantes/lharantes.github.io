@@ -6,7 +6,7 @@ categories: [Azure]
 tags: [azure, fileserver]
 slug: 'migrate-file-server-to-azure-parte1'
 image:
-  path: assets/img/27/27-header.webp
+  path: /assets/img/27/27-header.webp
 ---
 
 Olá pessoal! Blz?

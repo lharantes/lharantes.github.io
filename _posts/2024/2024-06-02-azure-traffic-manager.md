@@ -6,7 +6,7 @@ slug: 'azure-traffic-manager'
 categories: ['Azure']
 tags: ['Azure', 'Load Balancer']
 image:
-  path: assets/img/13/13-header.webp
+  path: /assets/img/13/13-header.webp
 ---
 
 Olá pessoal! Blz?

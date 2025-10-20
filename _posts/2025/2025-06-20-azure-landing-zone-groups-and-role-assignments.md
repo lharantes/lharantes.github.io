@@ -5,7 +5,7 @@ categories: [Devops, Terraform]
 tags: [devops, azure, terraform]
 slug: 'azure-landing-zone-groups-and-role-assignments'
 image:
-  path: assets/img/39/39-header.webp
+  path: /assets/img/39/39-header.webp
 ---
 
 Olá pessoal! Blz?

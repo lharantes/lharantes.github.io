@@ -5,7 +5,7 @@ categories: [Devops, Terraform]
 tags: [devops, terraform, azure]
 slug: 'import-azure-terraform'
 image:
-  path: assets/img/37/37-header.webp
+  path: /assets/img/37/37-header.webp
 ---
 
 Olá pessoal! Blz?

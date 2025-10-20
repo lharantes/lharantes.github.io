@@ -5,7 +5,7 @@ categories: [Azure]
 tags: [azure, sql]
 slug: 'free-azure-sql-database'
 image:
-  path: assets/img/33/33-header.webp
+  path: /assets/img/33/33-header.webp
 ---
 
 Olá pessoal! Blz?

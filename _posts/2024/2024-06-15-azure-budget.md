@@ -6,7 +6,7 @@ slug: 'azure-budget'
 categories:  ['Azure', 'Finops']
 tags: ['Azure', 'Cost', 'Budget', 'Finops']
 image:
-  path: assets/img/14/14-header.webp
+  path: /assets/img/14/14-header.webp
 ---
 
 Olá pessoal! Blz?

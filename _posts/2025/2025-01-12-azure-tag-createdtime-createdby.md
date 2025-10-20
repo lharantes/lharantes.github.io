@@ -6,7 +6,7 @@ categories: [Azure]
 tags: [azure, tag]
 slug: 'azure-tag-createdondate-createdby'
 image:
-  path: assets/img/30/30-header.webp
+  path: /assets/img/30/30-header.webp
 ---
 
 Olá pessoal! Blz?

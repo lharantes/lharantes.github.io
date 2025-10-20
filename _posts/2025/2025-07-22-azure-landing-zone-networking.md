@@ -5,7 +5,7 @@ categories: [Devops, Terraform]
 tags: [devops, azure, terraform]
 slug: 'azure-landing-zone-networking'
 image:
-  path: assets/img/41/41-header.webp
+  path: /assets/img/41/41-header.webp
 ---
 
 Olá pessoal! Blz?

@@ -5,7 +5,7 @@ slug: 'azure-custom-rbac'
 categories: ['Azure', 'Security']
 tags: ['Azure', 'Security', 'RBAC']
 image:
-  path: assets/img/11/11-header.webp
+  path: /assets/img/11/11-header.webp
 ---
 
 Olá pessoal! Blz?

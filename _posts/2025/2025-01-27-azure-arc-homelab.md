@@ -6,7 +6,7 @@ categories: [Azure]
 tags: [azure, arc, homelab]
 slug: 'azure-arc-homelab'
 image:
-  path: assets/img/31/31-header.webp
+  path: /assets/img/31/31-header.webp
 ---
 
 Olá pessoal! Blz?

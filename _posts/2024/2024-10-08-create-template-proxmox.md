@@ -6,7 +6,7 @@ categories: [HomeLab, Proxmox]
 tags: [homelab, proxmox]
 slug: 'create-template-proxmox'
 image:
-  path: assets/img/25/25-header.webp
+  path: /assets/img/25/25-header.webp
 ---
 
 Olá pessoal! Blz?

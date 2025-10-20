@@ -5,7 +5,7 @@ categories: [Devops, Terraform]
 tags: [devops, azure, terraform]
 slug: 'azure-landing-zone-naming-tagging'
 image:
-  path: assets/img/40/40-header.webp
+  path: /assets/img/40/40-header.webp
 ---
 
 Olá pessoal! Blz?

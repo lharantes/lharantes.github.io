@@ -6,7 +6,7 @@ categories: [Devops, Terraform]
 tags: [devops, terraform]
 slug: 'terraform-devops-if-else'
 image:
-  path: assets/img/22/22-header.webp
+  path: /assets/img/22/22-header.webp
 ---
 
 Olá pessoal! Blz?

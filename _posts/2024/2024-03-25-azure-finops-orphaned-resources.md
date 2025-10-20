@@ -5,7 +5,7 @@ slug: 'azure-finops-orphaned-resources'
 categories:  ['Azure', 'Finops']
 tags:  ['Azure', 'Finops']
 image:
-  path: assets/img/07/07-header.webp
+  path: /assets/img/07/07-header.webp
 ---
 
 Olá pessoal! Blz?

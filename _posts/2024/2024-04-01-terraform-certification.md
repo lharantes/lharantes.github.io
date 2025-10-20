@@ -5,7 +5,7 @@ slug: 'terraform-certification'
 categories: ['Certificação', 'Terraform']
 tags: ['Certificação', 'Terraform']
 image:
-  path: assets/img/08/08-header.webp
+  path: /assets/img/08/08-header.webp
 ---
 
 Olá pessoal! Blz?
