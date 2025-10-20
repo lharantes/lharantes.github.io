@@ -104,7 +104,7 @@ data "azuread_users" "owners" {
   user_principal_names = var.owners
 }
 
-# Recuperar do Entra ID os usuários que serãop membros do grupo que será criado
+# Recuperar do Entra ID os usuários que serãop membros do grupo que será criado. 
 data "azuread_user" "user_id" {
   for_each            = toset(var.member_id)
   user_principal_name = each.key
