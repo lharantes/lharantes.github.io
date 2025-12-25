@@ -112,7 +112,7 @@ Existem 3 (três) comandos que você pode escolher de acordo com o que você des
 Vamos começar com um exemplo simples, iremos gerar o código Terraform e o arquivo de estado para um resource group chamado `rg-network`:
 
 ```bash 
-astfexport resource-group 'rg-network'
+aztfexport resource-group 'rg-network'
 ```
 ![import-azure-terraform](/assets/img/37/02.png){: .shadow .rounded-10}
 
