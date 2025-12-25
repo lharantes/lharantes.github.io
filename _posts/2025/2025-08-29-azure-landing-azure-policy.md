@@ -15,7 +15,7 @@ Dando continuidade a série de artigos para automatizar a configuração de uma 
 > Geralmente, dependendo do tamanho do ambiente a melhor forma seja habilitar essas políticas no **grupo de gerenciamento** e a cada **nova assinatura** herdará essas políticas, mas vou mostrar como podemos fazer isso com Terraform e depois você pode decidir se usará isso por Terraform ou diretamente no portal do Azure.
 {: .prompt-info }
 
-Compartilho aqui a lista de artigos até aqui para criarmos nossa **Azure Landing Zone com Terraform**: 
+Compartilho aqui a lista de artigos até aqui para criarmos nossa **Azure Landing Zone com Terraform**:
 
 - <a href="https://arantes.net.br/posts/azure-landing-zone-groups-and-role-assignments/" target="_blank">Azure Landing Zone: Criar grupos no Entra ID e adicionar permissões com Terraform</a>
 
