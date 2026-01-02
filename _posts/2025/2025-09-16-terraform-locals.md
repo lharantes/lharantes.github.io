@@ -1,5 +1,5 @@
 ---
-title: "Azure Landing Zone: Azure Policy com Terraform"
+title: "Usando Terraform Locals para Padronização e Governança no Microsoft Azure"
 date: 2025-09-16 01:00:00
 categories: [Terraform]
 tags: [devops, azure, terraform]
