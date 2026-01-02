@@ -160,7 +160,7 @@ resource "azurerm_subscription_policy_assignment" "enforceTagPolicy" {
 }
 ``` 
 
-> No exemplo acima estamo aplicando uma política no escopo da **Assinatura (Subscription)**
+> No exemplo acima estamos aplicando uma política no escopo da **Assinatura (Subscription)**
 {: .prompt-info } 
 
 ## Concluindo!
