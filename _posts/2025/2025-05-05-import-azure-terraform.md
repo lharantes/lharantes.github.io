@@ -10,7 +10,7 @@ image:
 
 Olá pessoal! Blz?
 
-Uma questão comum quando queremos/desejamos automatizar o deploy de recursos em cloud usando Terraform em ambientes existentes é: **"O que faremos com os recursos existentes para podermos gerenciá-los através do Terraform?"**. 
+Uma questão comum quando queremos/desejamos automatizar o deploy de recursos em cloud usando Terraform em ambientes existentes é: **"O que faremos com os recursos existentes para podermos gerenciá-los através do Terraform?"**
 
 Para essa questão temos no Terraform a opção de importar os recursos com o comando `terraform import`, mas isso não gera o código Terraform para esses recursos e somente iria importá-los para o arquivo de estado. Como isso seria uma tarefa manual e não atende totalmente por não gerar o código, devemos explorar outras opções e uma ótima ferramenta e que abordaremos nesse artigo é a **aztfexport** da Microsoft, uma ferramenta que ajuda a gerenciar facilmente seus recursos existentes do Azure no Terraform.
 

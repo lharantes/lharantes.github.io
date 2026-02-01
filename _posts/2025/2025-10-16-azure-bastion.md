@@ -2,7 +2,7 @@
 title: "Azure Bastion: acesso seguro a máquinas virtuais no Azure e como automatizar a criação"
 date: 2025-10-16 01:00:00
 categories: [Azure]
-tags: [azure]
+tags: [azure, powershell, terraform]
 slug: 'azure-bastion'
 image:
   path: /assets/img/46/46-header.webp
@@ -14,7 +14,7 @@ No artigo de hoje gostaria de trazer um assunto sobre um recurso bem conhecido j
 
 Primeiramente, vou trazer uma descrição sobre o recurso do Azure Bastion e depois deixar um script **powershell e terrraform** para podermos fazer a criação do Azure Bastion em um horário definido para termos esse recurso somente durante o horário comercial. Isso pode ajudar empresas menores a terem uma economia na utlização do recurso.
 
-##O que é Azure Bastion?
+## O que é Azure Bastion?
 
 O Azure Bastion é um serviço **PaaS (Platform as a Service)** do Microsoft Azure que permite acesso seguro a máquinas virtuais **Windows (RDP) e Linux (SSH)** diretamente pelo Azure Portal ou por cliente nativo, sem expor IP público na VM e **SEM ABRIR** portas 22 ou 3389 para a Internet.
 
