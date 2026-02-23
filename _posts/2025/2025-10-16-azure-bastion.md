@@ -155,7 +155,6 @@ Mas como gosto sempre de disponibilizar a parte de automação seja com **PowerS
 ### PowerShell
 
 ```powershell
-& {
   $subId = "";  # opcional: "00000000-0000-0000-0000-000000000000"
   $loc   = "westeurope";
   $rg    = "rg-bastion-demo";
@@ -201,13 +200,11 @@ Mas como gosto sempre de disponibilizar a parte de automação seja com **PowerS
   }
 
   "OK - Bastion criado/validado: RG=$rg | VNet=$vnet | Bastion=$basName | PIP=$pipName | Location=$loc"
-}
 ```
 
 Para remover o Azure Bastion no final do expediente:
 
 ```powershell
-& {
   $rg="rg-bastion-demo"
   $basName="bas-demo"
   $pipName="pip-bastion-demo"
@@ -221,7 +218,6 @@ Para remover o Azure Bastion no final do expediente:
   if ($pip) { Remove-AzPublicIpAddress -ResourceGroupName $rg -Name $pipName -Force }
 
   "OK - Bastion e Public IP removidos (se existiam): RG=$rg | Bastion=$basName | PIP=$pipName"
-}
 ```
 
 ### Terraform
